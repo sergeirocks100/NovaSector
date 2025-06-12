@@ -34,6 +34,11 @@
 
 /* MEALS */
 
+/obj/effect/spawner/random/vendor_meal_mains
+	name = "random main spawner"
+	desc = "I hope I get one that actually matches my side."
+	icon_state = "loot"
+
 /*
 *	NT Meals
 */

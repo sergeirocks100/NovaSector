@@ -33,7 +33,11 @@
 /obj/structure/closet/emcloset/PopulateContents()
 	..()
 
-	new /obj/item/storage/box/emergency_spacesuit(src) // NOVA EDIT ADD
+	// NOVA EDIT ADD START
+	new /obj/item/storage/box/emergency_spacesuit(src)
+	
+	new /obj/item/storage/box/foodpack/ration(src)
+	// NOVA EDIT ADD END
 
 	if (prob(40))
 		new /obj/item/storage/toolbox/emergency(src)

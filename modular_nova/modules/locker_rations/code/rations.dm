@@ -1,26 +1,31 @@
 //Emergency rations, and their contents
 
-/* RATION FOODPACK */
+/* RATION BAG */
 
-/obj/item/storage/box/foodpack/ration
+// Because i can't figure out how to override the PopulateContents() of the import vendor foodpack, i've decided to make the ration bag its own type.
+
+/obj/item/storage/box/ration
 	name = "\improper emergency ration"
 	desc = "A blue plastic sack containing an emergency ration, meant to keep the crew fed in the event a chef is absent or incapable of working.\
 			Intended for distribution in times of disaster or war, its contents are nourishing, and intended to be edible to a wide variety of potential species."
 	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	icon_state = "foodpack_ration_big"
+	illustration = null
+	custom_price = PAYCHECK_CREW * 1.8
 	custom_materials = list(/datum/material/plastic =SHEET_MATERIAL_AMOUNT)
-	main_course = /obj/effect/spawner/random/vendor_meal_mains/ration_one //First main
-	var/main_course_2 = /obj/effect/spawner/random/vendor_meal_mains/ration_two //Second Main
-	side_item = /obj/effect/spawner/random/vendor_meal_sides/ration_one //First Side
-	var/side_item_2 = /obj/effect/spawner/random/vendor_meal_sides/ration_two //Second side
-	condiment_pack = /obj/item/reagent_containers/condiment/pack/peanut_butter
+	foldable_result = /obj/item/stack/sheet/plastic
+	var/first_main = /obj/effect/spawner/random/vendor_meal_mains/ration_one
+	var/second_main = /obj/effect/spawner/random/vendor_meal_mains/ration_two
+	var/first_side = /obj/effect/spawner/random/vendor_meal_sides/ration_one
+	var/second_side = /obj/effect/spawner/random/vendor_meal_sides/ration_two
+	var/condiment_pack = /obj/item/reagent_containers/condiment/pack/peanut_butter
 	
-/obj/item/storage/box/foodpack/ration/PopulateContents()
+/obj/item/storage/box/ration/PopulateContents()
 	. = ..()
-	new main_course(src)
-	new main_course_2(src)
-	new side_item(src)
-	new side_item_2(src)
+	new first_main(src)
+	new second_main(src)
+	new first_side(src)
+	new second_side(src)
 	new /obj/item/food/vendor_tray_meal/side/ration/bag/cracker(src) // Gauranteed crackers, no matter what.
 	new condiment_pack(src)
 
@@ -83,6 +88,7 @@
 /obj/item/food/vendor_tray_meal/side/ration
 	name = "\improper Emergency Ration Side"
 	desc = "This is the base type for emergency ration sides. If you somehow managed to get this in normal gameplay, please file a bug report."
+	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	trash_type = /obj/item/trash/empty_side_pack/ration
 	
 /obj/item/food/vendor_tray_meal/side/ration/bag
@@ -163,7 +169,7 @@
 	name = "random ration second main spawner"
 	icon_state = "loot"
 
-/obj/effect/spawner/random/vendor_meal_mains/ration_one/Initialize(mapload)
+/obj/effect/spawner/random/vendor_meal_mains/ration_two/Initialize(mapload)
 	loot = list(
 		/obj/item/food/vendor_tray_meal/ration/bncstew,
 		/obj/item/food/vendor_tray_meal/ration/wildrice,
@@ -187,7 +193,7 @@
 	name = "random ration second side spawner"
 	icon_state = "loot"
 
-/obj/effect/spawner/random/vendor_meal_sides/ration_one/Initialize(mapload)
+/obj/effect/spawner/random/vendor_meal_sides/ration_two/Initialize(mapload)
 	loot = list(
 		/obj/item/food/vendor_tray_meal/side/ration/figbar,
 		/obj/item/food/vendor_tray_meal/side/ration/bag/sbtart,
@@ -196,6 +202,7 @@
 	. = ..()
 	
 /obj/item/trash/empty_side_pack/ration
+	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	icon_state = "foodpack_ration_trash"
 	
 /obj/item/trash/empty_side_pack/ration/bag

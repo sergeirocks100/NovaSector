@@ -36,7 +36,7 @@
 	// NOVA EDIT ADD START
 	new /obj/item/storage/box/emergency_spacesuit(src)
 	
-	new /obj/item/storage/box/foodpack/ration(src)
+	new /obj/item/storage/box/ration(src)
 	// NOVA EDIT ADD END
 
 	if (prob(40))

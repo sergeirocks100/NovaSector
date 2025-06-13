@@ -34,10 +34,9 @@ E.g:
 
 ### Included files that are not contained in this module:
 
-- `modular_nova/modules/imported_vendors/code/vendor_containers.dm`: The ration foodpack is a subtype of the vendor foodpack.
-- `modular_nova/modules/imported_vendors/code/vendor_food.dm`: The vendor mains/sides are subtypes of the vendor ones.
+- `modular_nova/modules/imported_vendors/code/vendor_food.dm`: The ration mains/sides are subtypes of the vendor ones.
 
 ### Credits:
 
-sergeirocks100: Programming, partial sprite work
-Paxilmaniac: Original foodpack/packaging sprites
+sergeirocks100 : Programming, partial sprite work
+The original creator of Skyrat-tg/16215 : Original foodpack/packaging sprites

@@ -38,5 +38,5 @@ E.g:
 
 ### Credits:
 
-sergeirocks100 : Programming, partial sprite work
-The original creator of Skyrat-tg/16215 : Original foodpack/packaging sprites
+sergeirocks100: Programming, partial sprite work
+Paxilmaniac: Original foodpack/packaging sprites

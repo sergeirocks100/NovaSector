@@ -449,7 +449,7 @@
 /datum/supply_pack/organic/ration
 	name = "Emergency Rations Box"
 	desc = "Is the station starving because there isn't a chef? Are the lizardpeople among the crew puking up the pizza? This box contains 8 surplus emergency rations, designed to be nutritious, filling, and to be edible across a wide range of crew species. Each ration comes with two randomly selected mains, two randomly selected sides, a cracker, and a peanut butter packet."
-	cost = CARGO_CRATE_VALUE * 2.5
+	cost = CARGO_CRATE_VALUE * 3
 	contains = list(
 		/obj/item/storage/box/ration = 8,
 	)

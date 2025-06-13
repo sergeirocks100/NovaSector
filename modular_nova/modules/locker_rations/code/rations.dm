@@ -2,7 +2,7 @@
 
 /* RATION BAG */
 
-// Because i can't figure out how to override the PopulateContents() of the import vendor foodpack, i've decided to make the ration bag its own type.
+// Because i couldn't figure out how to override the PopulateContents() of the import vendor foodpack, i've decided to make the ration bag its own type.
 
 /obj/item/storage/box/ration
 	name = "\improper emergency ration"
@@ -29,7 +29,7 @@
 	new /obj/item/food/vendor_tray_meal/side/ration/bag/cracker(src) // Gauranteed crackers, no matter what.
 	new condiment_pack(src)
 
-/obj/item/storage/box/foodpack/ration/examine_more(mob/user)
+/obj/item/storage/box/ration/examine_more(mob/user)
 	. = ..()
 	. += span_notice("<i>You can make out a faded logo of some sort on the side, that almost looks like...</i>")
 	return .
@@ -42,10 +42,6 @@
 	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	icon_state = "foodtray_ricenbeans"
 	foodtypes = VEGETABLES
-
-/obj/item/food/vendor_tray_meal/ration/examine_more(mob/user) // Hopefully, this wipes out the examine more.
-	. = ..()
-	return
 
 /obj/item/food/vendor_tray_meal/ration/ricenbeans
 	name = "\improper Emergency Ration Main: Beans and Yellow Rice"
@@ -125,7 +121,7 @@
 /obj/item/food/vendor_tray_meal/side/ration/figbar
 	name = "\improper Emergency Ration Side: Fig Bar"
 	desc = "A classic, gluten-free fig bar."
-	icon_state = "bag_ration_bstart"
+	icon_state = "foodpack_ration_figbar"
 	tastes = list("pastry" = 1, "sweet fig" = 1)
 	foodtypes = VEGETABLES | FRUIT | SUGAR
 	
@@ -143,7 +139,7 @@
 	tastes = list("roasted corn" = 1, "raisins" = 1)
 	foodtypes = VEGETABLES | FRUIT
 
-/obj/item/reagent_containers/condiment/pack/peanut_butter
+/obj/item/reagent_containers/condiment/pack/peanut_butter // This didn't already exist, for some reason.
 	name = "peanut butter pack"
 	originalname = "peanut butter"
 	volume = 10

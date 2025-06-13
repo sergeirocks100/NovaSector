@@ -6,14 +6,14 @@
 	name = "\improper emergency ration"
 	desc = "A blue plastic sack containing an emergency ration, meant to keep the crew fed in the event a chef is absent or incapable of working.\
 			Intended for distribution in times of disaster or war, its contents are nourishing, and intended to be edible to a wide variety of potential species."
-	icon = 'modular_nova/modules/locker_rations/code/rations.dmi'
+	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	icon_state = "foodpack_ration_big"
 	custom_materials = list(/datum/material/plastic =SHEET_MATERIAL_AMOUNT)
 	main_course = /obj/effect/spawner/random/vendor_meal_mains/ration_one //First main
-	var/main_course_2 = /obj/item/food/vendor_tray_meal //Second Main
-	side_item = /obj/effect/spawner/random/vendor_meal_sides/nt //First Side
-	var/side_item_2 = /obj/effect/spawner/random/vendor_meal_sides/nt //Second side
-	condiment_pack = /obj/item/reagent_containers/condiment/pack/peanutbutter
+	var/main_course_2 = /obj/effect/spawner/random/vendor_meal_mains/ration_two //Second Main
+	side_item = /obj/effect/spawner/random/vendor_meal_sides/ration_one //First Side
+	var/side_item_2 = /obj/effect/spawner/random/vendor_meal_sides/ration_two //Second side
+	condiment_pack = /obj/item/reagent_containers/condiment/pack/peanut_butter
 	
 /obj/item/storage/box/foodpack/ration/PopulateContents()
 	. = ..()
@@ -21,7 +21,7 @@
 	new main_course_2(src)
 	new side_item(src)
 	new side_item_2(src)
-	new /obj/item/food/vendor_tray_meal/side/ration/cracker(src) // Gauranteed crackers, no matter what.
+	new /obj/item/food/vendor_tray_meal/side/ration/bag/cracker(src) // Gauranteed crackers, no matter what.
 	new condiment_pack(src)
 
 /obj/item/storage/box/foodpack/ration/examine_more(mob/user)
@@ -34,7 +34,7 @@
 /obj/item/food/vendor_tray_meal/ration
 	name = "\improper Emergency Ration Main"
 	desc = "This is the base type for emergency ration mains. If you somehow managed to get this in normal gameplay, please file a bug report."
-	icon = 'modular_nova/modules/locker_rations/code/rations.dmi'
+	icon = 'modular_nova/modules/locker_rations/icons/rations.dmi'
 	icon_state = "foodtray_ricenbeans"
 	foodtypes = VEGETABLES
 
@@ -120,7 +120,7 @@
 	name = "\improper Emergency Ration Side: Fig Bar"
 	desc = "A classic, gluten-free fig bar."
 	icon_state = "bag_ration_bstart"
-	tastes = list("pastry" = 1 "sweet fig" = 1)
+	tastes = list("pastry" = 1, "sweet fig" = 1)
 	foodtypes = VEGETABLES | FRUIT | SUGAR
 	
 /obj/item/food/vendor_tray_meal/side/ration/bag/sbtart
@@ -137,11 +137,11 @@
 	tastes = list("roasted corn" = 1, "raisins" = 1)
 	foodtypes = VEGETABLES | FRUIT
 
-/obj/item/reagent_containers/condiment/pack/peanutbutter
+/obj/item/reagent_containers/condiment/pack/peanut_butter
 	name = "peanut butter pack"
 	originalname = "peanut butter"
 	volume = 10
-	list_reagents = list(/datum/reagent/consumable/peanutbutter = 10)
+	list_reagents = list(/datum/reagent/consumable/peanut_butter = 10)
 
 /* MISC */
 

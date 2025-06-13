@@ -8204,6 +8204,7 @@
 #include "modular_nova\modules\loadouts\loadout_items\under\donator.dm"
 #include "modular_nova\modules\loadouts\loadout_items\under\loadout_datum_under.dm"
 #include "modular_nova\modules\loadouts\loadout_ui\loadout_outfit_helpers.dm"
+#include "modular_nova\modules\locker_rations\code\rations.dm"
 #include "modular_nova\modules\lorecaster\code\archive_viewer.dm"
 #include "modular_nova\modules\lorecaster\code\config.dm"
 #include "modular_nova\modules\lorecaster\code\story_manager.dm"
@@ -9138,5 +9139,4 @@
 #include "modular_nova\modules\xenoarchartifacts\obj\geosample.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\particle_battery.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\wave_scanner.dm"
-#include "modular_nova\modules\locker_rations\code\rations.dm"
 // END_INCLUDE

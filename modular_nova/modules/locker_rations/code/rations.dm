@@ -118,26 +118,26 @@
 	tastes = list("pastry" = 1)
 	foodtypes = VEGETABLES | SUGAR
 	
-/obj/item/food/vendor_tray_meal/side/ration/figbar
-	name = "\improper Emergency Ration Side: Fig Bar"
-	desc = "A classic, gluten-free fig bar."
-	icon_state = "foodpack_ration_figbar"
-	tastes = list("pastry" = 1, "sweet fig" = 1)
-	foodtypes = VEGETABLES | FRUIT | SUGAR
-	
-/obj/item/food/vendor_tray_meal/side/ration/bag/sbtart
-	name = "\improper Emergency Ration Side: Strawberry Toaster Pastry"
-	desc = "A gluten-free, rice flour-based toaster pastry. This one's strawberry flavored."
-	icon_state = "bag_ration_sbtart"
-	tastes = list("sweet strawberry" = 1, "pastry" = 1)
-	foodtypes = VEGETABLES | FRUIT | SUGAR
-	
 /obj/item/food/vendor_tray_meal/side/ration/bag/cornnuts
-	name = "\improper Emergency Ration Side: Corn Nut and Raisin Mix"
-	desc = "Crunchy corn nuts, mixed with raisins."
+	name = "\improper Emergency Ration Side: Corn Nuts"
+	desc = "A bunch of crunchy corn nuts."
 	icon_state = "bag_ration_cornnuts"
-	tastes = list("roasted corn" = 1, "raisins" = 1)
-	foodtypes = VEGETABLES | FRUIT
+	tastes = list("roasted corn" = 1)
+	foodtypes = VEGETABLES
+
+/obj/item/food/vendor_tray_meal/side/ration/bag/pretzels
+	name = "\improper Emergency Ration Side: Pretzel Bites"
+	desc = "A bunch of crunchy, gluten free, salted pretzel bites."
+	icon_state = "bag_ration_pretzels"
+	tastes = list("hard pretzel" = 1)
+	foodtypes = VEGETABLES
+	
+/obj/item/food/vendor_tray_meal/side/ration/granola
+	name = "\improper Emergency Ration Side: Granola Bar"
+	desc = "A classic, honey and oat granola bar."
+	icon_state = "foodpack_ration_granola"
+	tastes = list("honey" = 1 "oats" = 1)
+	foodtypes = VEGETABLES
 
 /obj/item/reagent_containers/condiment/pack/peanut_butter // This didn't already exist, for some reason.
 	name = "peanut butter pack"
